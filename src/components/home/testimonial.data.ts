@@ -3,61 +3,61 @@ import type { Testimonial } from '@/interfaces/testimonial'
 export const data: Array<Testimonial> = [
   {
     id: 1,
-    title: 'Detailed learning materials',
+    title: 'Freelancing se income start ho gayi',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      'Milestone mein Digital Marketing course kiya. Teachers practical projects karwate hain. Ab main Upwork pe clients handle kar raha hoon aur apni pehli earning bhi start ho chuki hai. Jaranwala mein itna solid institute milna bohot rare hai.',
     user: {
       id: 1,
-      name: 'Luis Sera',
-      professional: 'UI/UX Engineer',
+      name: 'Ali Raza',
+      professional: 'Digital Marketing Student — Faisalabad',
       photo: '1.jpg',
     },
   },
   {
     id: 2,
-    title: 'Best Quality Online Course!',
+    title: 'Web Development ne career badal diya',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Pehle coding se darr lagta tha, lekin yahan step-by-step samjhaya gaya. Web Development course ke baad main websites bana sakta hoon aur local clients se projects bhi milne lage hain. Highly recommended!',
     user: {
-      id: 1,
-      name: 'Riski',
-      professional: 'Software Engineer',
+      id: 2,
+      name: 'Hassan Ahmed',
+      professional: 'Web Development Student — Jaranwala',
       photo: '2.jpg',
     },
   },
   {
     id: 3,
-    title: 'Very complete class',
+    title: 'Spoken English confidence boost',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      "Oxford's Advanced Spoken English course ne meri speaking improve kar di. British aur American accent practice se interviews mein confidence aa gaya. Teachers bohot supportive hain.",
     user: {
-      id: 1,
-      name: 'Nguyễn Văn',
-      professional: 'FullStack Designer',
+      id: 3,
+      name: 'Ayesha Khan',
+      professional: 'Spoken English Student — Sheikhupura',
       photo: '3.jpg',
     },
   },
   {
     id: 4,
-    title: 'Great Quality!',
+    title: 'IELTS preparation on point',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'IELTS / PTE preparation yahan structured hai — reading, writing, listening, speaking sab cover hota hai. Mera band score improve hua aur abroad plans clear ho gaye. Thank you Milestone team!',
     user: {
-      id: 1,
-      name: 'Diana Jordan',
-      professional: 'SEO Expert',
+      id: 4,
+      name: 'Usman Malik',
+      professional: 'IELTS Student — Lahore',
       photo: '4.jpg',
     },
   },
   {
     id: 5,
-    title: 'Detailed learning materials',
+    title: 'Graphic Designing se freelance start',
     content:
-      'Classes that provide very detailed material in term of making UI UX Design starting team making low and hight quality, system designs, using data layout and make prototypes and testing.',
+      'Basic Computer se shuru kiya, phir Graphic Designing complete ki. Ab Canva aur Adobe tools se logos aur social posts banata hoon. Institute ka environment friendly hai aur admission process bhi asaan tha.',
     user: {
-      id: 1,
-      name: 'Ashley Graham',
-      professional: 'Back-End Developer',
+      id: 5,
+      name: 'Fatima Noor',
+      professional: 'Graphic Designing Student — Jaranwala',
       photo: '5.jpg',
     },
   },

@@ -1,38 +1,36 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import { SocialLink } from '@/interfaces/social-link'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import LanguageIcon from '@mui/icons-material/Language'
 
-export const socialLinks: SocialLink[] = [
+const socialLinks = [
   {
     name: 'Instagram',
-    link: '#',
-    icon: '/images/icons/instagram.svg',
+    link: 'https://www.instagram.com/milestone_jrw/',
+    icon: <InstagramIcon fontSize="small" />,
   },
   {
-    name: 'YouTube',
-    link: '#',
-    icon: '/images/icons/youtube.svg',
+    name: 'Facebook',
+    link: 'https://www.facebook.com/milestonejrw',
+    icon: <FacebookIcon fontSize="small" />,
   },
   {
-    name: 'Twitter',
-    link: '#',
-    icon: '/images/icons/twitter.svg',
+    name: 'WhatsApp',
+    link: 'https://wa.me/923154297472',
+    icon: <WhatsAppIcon fontSize="small" />,
   },
   {
-    name: 'Dribbble',
-    link: 'https://dribbble.com/shots/18114471-Coursespace-Online-Course-Landing-Page',
-    icon: '/images/icons/dribbble.svg',
-  },
-  {
-    name: 'Github',
-    link: 'https://github.com/hiriski/coursespace-landing-page',
-    icon: '/images/icons/github.svg',
+    name: 'Website',
+    link: 'https://milestonejrw.pk',
+    icon: <LanguageIcon fontSize="small" />,
   },
 ]
 
 interface SocialLinkItemProps {
-  item: SocialLink
+  item: (typeof socialLinks)[number]
 }
 
 const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
@@ -46,6 +44,8 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
   >
     <Link
       target="_blank"
+      rel="noopener noreferrer"
+      aria-label={item.name}
       sx={{
         lineHeight: 0,
         display: 'flex',
@@ -58,21 +58,14 @@ const SocialLinkItem: FC<SocialLinkItemProps> = ({ item }) => (
         '&:hover': {
           backgroundColor: 'secondary.main',
         },
-        '& img': {
-          fill: 'currentColor',
-          width: 22,
-          height: 'auto',
-        },
       }}
       href={item.link}
     >
-      {/* eslint-disable-next-line */}
-      <img src={item.icon} alt={item.name + 'icon'} />
+      {item.icon}
     </Link>
   </Box>
 )
 
-// default
 const SocialLinks: FC = () => {
   return (
     <Box sx={{ ml: -1 }}>
@@ -86,9 +79,9 @@ const SocialLinks: FC = () => {
           listStyle: 'none',
         }}
       >
-        {socialLinks.map((item) => {
-          return <SocialLinkItem key={item.name} item={item} />
-        })}
+        {socialLinks.map((item) => (
+          <SocialLinkItem key={item.name} item={item} />
+        ))}
       </Box>
     </Box>
   )

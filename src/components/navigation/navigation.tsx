@@ -51,7 +51,7 @@ const Navigation: FC = () => {
             }}
           >
             {/* eslint-disable-next-line */}
-            <img src="/images/headline-curve.svg" alt="Headline curve" />
+            <img src="/images/headline-curve.svg?v=3" alt="Headline curve" />
           </Box>
           {label}
         </Box>

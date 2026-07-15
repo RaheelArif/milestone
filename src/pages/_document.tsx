@@ -24,15 +24,15 @@ class MyDocument extends Document<DocumentProps> {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.background.paper} />
 
-          <meta content="#fbfbfb" name="theme-color" />
-          <meta content="#fbfbfb" name="msapplication-navbutton-color" />
-          <meta content="#fbfbfb" name="apple-mobile-web-app-status-bar-style" />
+          <meta content="#0B3D91" name="theme-color" />
+          <meta content="#0B3D91" name="msapplication-navbutton-color" />
+          <meta content="#0B3D91" name="apple-mobile-web-app-status-bar-style" />
           <meta content="yes" name="apple-mobile-web-app-capable" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,500;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}

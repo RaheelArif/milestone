@@ -1,10 +1,10 @@
 import { TypographyOptions } from '@mui/material/styles/createTypography'
 
-export const fontFamily = [
-  '"Cabin",-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
-].join(',')
+export const fontFamily = ['"Manrope"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'].join(',')
 
-const headingLineHeight = 1.4
+export const headingFontFamily = ['"Cormorant Garamond"', 'Georgia', 'serif'].join(',')
+
+const headingLineHeight = 1.25
 
 const typography: TypographyOptions = {
   fontFamily,
@@ -13,46 +13,65 @@ const typography: TypographyOptions = {
   fontWeightMedium: 600,
   fontWeightBold: 700,
   h1: {
-    fontSize: 34,
+    fontFamily: headingFontFamily,
+    fontSize: 40,
     lineHeight: headingLineHeight,
-    fontWeight: 700,
+    fontWeight: 600,
+    letterSpacing: '-0.02em',
   },
   h2: {
-    fontSize: 28,
+    fontFamily: headingFontFamily,
+    fontSize: 34,
     lineHeight: headingLineHeight,
-    fontWeight: 700,
+    fontWeight: 600,
+    letterSpacing: '-0.02em',
   },
   h3: {
-    fontSize: 24,
+    fontFamily: headingFontFamily,
+    fontSize: 28,
     lineHeight: headingLineHeight,
-    fontWeight: 700,
+    fontWeight: 600,
+    letterSpacing: '-0.01em',
   },
   h4: {
-    fontSize: 22,
-    lineHeight: headingLineHeight,
-    fontWeight: 700,
-  },
-  h5: {
-    fontSize: 17,
+    fontFamily: headingFontFamily,
+    fontSize: 24,
     lineHeight: headingLineHeight,
     fontWeight: 600,
   },
+  h5: {
+    fontFamily,
+    fontSize: 17,
+    lineHeight: 1.4,
+    fontWeight: 600,
+  },
   h6: {
+    fontFamily,
     fontSize: 15,
-    lineHeight: headingLineHeight,
+    lineHeight: 1.4,
     fontWeight: 600,
   },
   body1: {
     fontSize: '1rem',
+    lineHeight: 1.7,
   },
   body2: {
-    fontSize: '0.9rem',
+    fontSize: '0.925rem',
+    lineHeight: 1.65,
   },
   subtitle1: {
-    fontSize: '0.85rem',
+    fontSize: '0.9rem',
+    lineHeight: 1.6,
   },
   subtitle2: {
-    fontSize: '0.8rem',
+    fontSize: '0.825rem',
+    lineHeight: 1.55,
+  },
+  button: {
+    fontFamily,
+    fontWeight: 600,
+    letterSpacing: '0.04em',
+    textTransform: 'none',
   },
 }
 

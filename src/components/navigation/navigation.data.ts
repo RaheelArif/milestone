@@ -3,18 +3,26 @@ import type { Navigation } from '@/interfaces/navigation'
 export const navigations: Navigation[] = [
   {
     label: 'Home',
-    path: '#', // '/',
+    path: 'hero',
   },
   {
     label: 'Courses',
-    path: 'popular-course', // '/popular-course',
+    path: 'popular-course',
   },
   {
-    label: 'Testimonial',
-    path: 'testimonial', // '/testimonial',
+    label: 'Why Us',
+    path: 'feature',
   },
   {
-    label: 'Mentor',
-    path: 'mentors', // '/mentors',
+    label: 'Reviews',
+    path: 'testimonial',
+  },
+  {
+    label: 'Mentors',
+    path: 'mentors',
+  },
+  {
+    label: 'Contact',
+    path: 'contact',
   },
 ]

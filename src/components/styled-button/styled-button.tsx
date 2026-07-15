@@ -95,45 +95,49 @@ const StyledButtonRoot = styled('button', {
     }),
   ...(color === 'primary' &&
     variant === 'contained' && {
-      backgroundColor: theme.palette.primary.main,
+      background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.dark} 100%)`,
       color: theme.palette.primary.contrastText,
-      boxShadow: '0 6px 22px 0 rgb(18 124 113 / 12%)',
+      boxShadow: '0 10px 28px rgba(11, 61, 145, 0.28)',
     }),
   ...(color === 'secondary' &&
     variant === 'contained' && {
-      backgroundColor: theme.palette.secondary.main,
-      color: theme.palette.primary.contrastText,
+      background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, ${theme.palette.secondary.dark} 100%)`,
+      color: theme.palette.secondary.contrastText,
+      boxShadow: '0 10px 28px rgba(79, 140, 255, 0.32)',
     }),
   ...(color === 'dark' &&
     variant === 'contained' && {
-      backgroundColor: '#313d56',
+      backgroundColor: theme.palette.text.primary,
       color: theme.palette.primary.contrastText,
     }),
   ...(color === 'light' &&
     variant === 'contained' && {
-      backgroundColor: theme.palette.primary.contrastText,
-      color: theme.palette.text.primary,
+      backgroundColor: '#FFFFFF',
+      color: theme.palette.primary.main,
+      boxShadow: '0 10px 28px rgba(255, 255, 255, 0.18)',
     }),
 
   ...(color === 'primary' &&
     variant === 'outlined' && {
-      border: `2px solid ${theme.palette.primary.main}`,
+      border: `1.5px solid ${theme.palette.primary.main}`,
       color: theme.palette.primary.main,
+      backgroundColor: 'rgba(255,255,255,0.55)',
+      backdropFilter: 'blur(8px)',
     }),
   ...(color === 'secondary' &&
     variant === 'outlined' && {
-      border: `2px solid ${theme.palette.secondary.main}`,
-      color: theme.palette.secondary.main,
+      border: `1.5px solid ${theme.palette.secondary.main}`,
+      color: theme.palette.secondary.dark,
     }),
   ...(color === 'dark' &&
     variant === 'outlined' && {
-      border: `2px solid #313d56`,
-      color: '#313d56',
+      border: `1.5px solid ${theme.palette.text.primary}`,
+      color: theme.palette.text.primary,
     }),
   ...(color === 'light' &&
     variant === 'outlined' && {
-      border: `2px solid #313d56`,
-      color: `#313d56`,
+      border: `1.5px solid ${theme.palette.text.primary}`,
+      color: theme.palette.text.primary,
     }),
 
   ...(color === 'primary' &&

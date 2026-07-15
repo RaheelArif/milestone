@@ -14,8 +14,18 @@ const Header: FC = () => {
   const matchMobileView = useMediaQuery(breakpoints.down('md'))
 
   return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
-      <Container sx={{ py: { xs: 2, md: 3 } }}>
+    <Box
+      sx={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 'appBar',
+        backgroundColor: 'rgba(255,255,255,0.82)',
+        backdropFilter: 'blur(14px)',
+        borderBottom: '1px solid',
+        borderColor: 'divider',
+      }}
+    >
+      <Container sx={{ py: { xs: 1.75, md: 2.25 } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Logo />
           <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>

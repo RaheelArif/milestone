@@ -19,15 +19,17 @@ const TestimonialItem: FC<Props> = ({ item }) => {
       </Box>
       <Box
         sx={{
-          boxShadow: 1,
-          borderRadius: 1,
+          boxShadow: 2,
+          borderRadius: 3,
           px: 2,
           py: 2,
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
-          width: 270,
-          backgroundColor: 'background.paper',
+          width: 290,
+          backgroundColor: 'rgba(255,255,255,0.92)',
+          border: '1px solid',
+          borderColor: 'divider',
         }}
       >
         <Box

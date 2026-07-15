@@ -22,11 +22,14 @@ const CourseCardItem: FC<Props> = ({ item }) => {
       <Box
         sx={{
           p: 2,
-          backgroundColor: 'background.paper',
+          backgroundColor: 'rgba(255,255,255,0.92)',
           borderRadius: 4,
-          transition: (theme) => theme.transitions.create(['box-shadow']),
+          border: '1px solid',
+          borderColor: 'divider',
+          transition: (theme) => theme.transitions.create(['box-shadow', 'transform']),
           '&:hover': {
-            boxShadow: 2,
+            boxShadow: 3,
+            transform: 'translateY(-4px)',
             [`& .${iconButtonClasses.root}`]: {
               backgroundColor: 'primary.main',
               color: 'primary.contrastText',
@@ -50,7 +53,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             {item.title}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Rating name="rating-course" value={item.rating} max={5} sx={{ color: '#ffce31', mr: 1 }} readOnly />
+            <Rating name="rating-course" value={item.rating} max={5} sx={{ color: 'secondary.main', mr: 1 }} readOnly />
             <Typography component="span" variant="h5">
               ({item.ratingCount})
             </Typography>
@@ -59,9 +62,8 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Typography variant="h5" color="primary.main">
-              {'$' + item.price}
+              Admission Open
             </Typography>
-            <Typography variant="h6">/ course</Typography>
           </Box>
           <IconButton
             color="primary"

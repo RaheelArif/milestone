@@ -88,12 +88,24 @@ const HomeOurMentors: FC = () => {
           xs: 8,
           md: 12,
         },
-        backgroundColor: '#ecf3f3',
+        background:
+          'linear-gradient(180deg, rgba(11, 61, 145, 0.04) 0%, rgba(79, 140, 255, 0.08) 100%)',
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h1" sx={{ fontSize: 40 }}>
+        <Typography
+          variant="h1"
+          sx={{
+            fontSize: { xs: 36, md: 44 },
+            fontFamily: '"Cormorant Garamond", Georgia, serif',
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
+          }}
+        >
           Our Expert Mentors
+        </Typography>
+        <Typography sx={{ color: 'text.secondary', mb: 3, mt: 1 }}>
+          Learn from experienced instructors focused on practical skills and career growth.
         </Typography>
 
         <Slider {...sliderConfig}>

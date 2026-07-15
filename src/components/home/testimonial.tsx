@@ -63,7 +63,14 @@ const HomeTestimonial: FC = () => {
   }
 
   return (
-    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
+    <Box
+      id="testimonial"
+      sx={{
+        pb: { xs: 6, md: 10 },
+        pt: { xs: 2, md: 4 },
+        background: 'linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(243,246,252,0.9) 100%)',
+      }}
+    >
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
@@ -71,14 +78,16 @@ const HomeTestimonial: FC = () => {
               component="h2"
               sx={{
                 position: 'relative',
-                fontSize: { xs: 36, md: 46 },
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontSize: { xs: 36, md: 48 },
                 mt: { xs: 0, md: 7 },
                 mb: 4,
-                lineHeight: 1,
-                fontWeight: 'bold',
+                lineHeight: 1.15,
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
               }}
             >
-              Testimonial What our{' '}
+              What Our{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -99,7 +108,7 @@ const HomeTestimonial: FC = () => {
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
+                  <img src="/images/headline-curve.svg?v=3" alt="Headline curve" />
                 </Box>
               </Typography>
               Say

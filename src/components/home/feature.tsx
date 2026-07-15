@@ -24,20 +24,27 @@ const BorderLinearProgress = styled(LinearProgress, {
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
     ...(order === 1 && {
-      backgroundColor: '#f303ff',
+      backgroundColor: '#0B3D91',
     }),
     ...(order === 2 && {
-      backgroundColor: '#26e8bd',
+      backgroundColor: '#4F8CFF',
     }),
     ...(order === 3 && {
-      backgroundColor: '#0063ff',
+      backgroundColor: '#3D6FCF',
     }),
   },
 }))
 
 const HomeFeature: FC = () => {
   return (
-    <Box id="feature" sx={{ py: { xs: 10, md: 14 }, backgroundColor: 'background.paper' }}>
+    <Box
+      id="feature"
+      sx={{
+        py: { xs: 10, md: 14 },
+        background:
+          'linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(243,246,252,0.95) 100%)',
+      }}
+    >
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={5}>
@@ -48,27 +55,30 @@ const HomeFeature: FC = () => {
                   position: 'absolute',
                   top: -36,
                   right: { xs: 0, md: -36 },
-                  boxShadow: 2,
-                  borderRadius: 1,
+                  boxShadow: 3,
+                  borderRadius: 3,
                   px: 2.2,
                   py: 1.4,
                   zIndex: 1,
-                  backgroundColor: 'background.paper',
+                  backgroundColor: 'rgba(255,255,255,0.92)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid',
+                  borderColor: 'divider',
                   width: 190,
                 }}
               >
                 <Typography variant="h5" sx={{ mb: 1 }}>
-                  Lorem ipsum dolor
+                  Skills in Demand
                 </Typography>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" color="text.secondary">
-                    UI/UI Design
+                    Graphic Designing
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={65} order={1} />
                 </Box>
                 <Box sx={{ mb: 2 }}>
                   <Typography variant="subtitle1" color="text.secondary">
-                    Mobile Development
+                    Digital Marketing
                   </Typography>
                   <BorderLinearProgress variant="determinate" color="inherit" value={40} order={2} />
                 </Box>
@@ -85,12 +95,15 @@ const HomeFeature: FC = () => {
                   position: 'absolute',
                   bottom: -12,
                   left: { xs: 0, md: -24 },
-                  boxShadow: 2,
-                  borderRadius: 1,
+                  boxShadow: 3,
+                  borderRadius: 3,
                   px: 2.2,
                   py: 2,
                   zIndex: 1,
-                  backgroundColor: 'background.paper',
+                  backgroundColor: 'rgba(255,255,255,0.92)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid',
+                  borderColor: 'divider',
                   textAlign: 'center',
                 }}
               >
@@ -103,9 +116,9 @@ const HomeFeature: FC = () => {
                     flexDirection: 'column',
                   }}
                 >
-                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>Lorem ipsum</Typography>
+                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>Success Rate</Typography>
                   <Typography variant="subtitle1" sx={{ mb: 1, color: 'text.disabled' }}>
-                    Lorem ipsum
+                    Guaranteed Growth
                   </Typography>
                   <Box
                     sx={{
@@ -117,7 +130,7 @@ const HomeFeature: FC = () => {
                       flexDirection: 'column',
                     }}
                   >
-                    <Typography variant="h4" sx={{ color: '#32dc88' }}>
+                    <Typography variant="h4" sx={{ color: 'secondary.main' }}>
                       75%
                     </Typography>
                     <CircularProgress
@@ -133,7 +146,7 @@ const HomeFeature: FC = () => {
                       variant="determinate"
                       value={75}
                       size={85}
-                      sx={{ transform: 'rotate(96deg) !important', color: '#32dc88', position: 'absolute' }}
+                      sx={{ transform: 'rotate(96deg) !important', color: 'secondary.main', position: 'absolute' }}
                     />
                   </Box>
                 </Box>
@@ -145,15 +158,17 @@ const HomeFeature: FC = () => {
               component="h2"
               sx={{
                 position: 'relative',
-                fontSize: { xs: 40, md: 50 },
+                fontFamily: '"Cormorant Garamond", Georgia, serif',
+                fontSize: { xs: 40, md: 52 },
                 ml: { xs: 0, md: 4 },
                 mt: 2,
                 mb: 3,
-                lineHeight: 1,
-                fontWeight: 'bold',
+                lineHeight: 1.15,
+                fontWeight: 600,
+                letterSpacing: '-0.02em',
               }}
             >
-              Make your{' '}
+              Unlock Your{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -164,7 +179,7 @@ const HomeFeature: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Learning <br />
+                Potential
                 <Box
                   sx={{
                     position: 'absolute',
@@ -175,21 +190,38 @@ const HomeFeature: FC = () => {
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/images/headline-curve.svg" alt="Headline curve" />
+                  <img src="/images/headline-curve.svg?v=3" alt="Headline curve" />
                 </Box>
               </Typography>
-              Enjoyable
             </Typography>
 
             <Typography sx={{ color: 'text.secondary', mb: 2, ml: { xs: 0, md: 4 } }}>
-              Set the way of learning according to your wishes with some of the benefits that you get us, so you on
-              enjoy the lessons that we provide.
+              At Milestone, you get practical training, expert mentoring, and career support — everything you need to
+              learn skills and start earning online.
             </Typography>
 
             <Grid container spacing={2} sx={{ ml: { xs: 0, md: 2 } }}>
               {data.map(({ title, description, icon }, index) => (
                 <Grid key={String(index)} item xs={12} md={6}>
-                  <Box sx={{ px: 2, py: 1.5, boxShadow: 1, borderRadius: 4, display: 'flex', alignItems: 'center' }}>
+                  <Box
+                    sx={{
+                      px: 2,
+                      py: 1.5,
+                      boxShadow: 1,
+                      borderRadius: 4,
+                      display: 'flex',
+                      alignItems: 'center',
+                      height: '100%',
+                      backgroundColor: 'rgba(255,255,255,0.85)',
+                      border: '1px solid',
+                      borderColor: 'divider',
+                      transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                      '&:hover': {
+                        transform: 'translateY(-3px)',
+                        boxShadow: 3,
+                      },
+                    }}
+                  >
                     <Box
                       sx={{
                         mr: 1,

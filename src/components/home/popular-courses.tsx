@@ -101,8 +101,18 @@ const HomePopularCourse: FC = () => {
                 justifyContent: { xs: 'center', md: 'flex-start' },
               }}
             >
-              <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                Most Popular Courses
+              <Typography
+                variant="h1"
+                sx={{
+                  mt: { xs: 0, md: -5 },
+                  fontSize: { xs: 34, md: 52 },
+                  fontFamily: '"Cormorant Garamond", Georgia, serif',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.15,
+                }}
+              >
+                Courses We Offer
               </Typography>
             </Box>
           </Grid>

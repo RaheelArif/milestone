@@ -20,11 +20,14 @@ const MentorCardItem: FC<Props> = ({ item }) => {
       <Box
         sx={{
           p: 2,
-          backgroundColor: 'background.paper',
+          backgroundColor: 'rgba(255,255,255,0.92)',
           borderRadius: 4,
-          transition: (theme) => theme.transitions.create(['box-shadow']),
+          border: '1px solid',
+          borderColor: 'divider',
+          transition: (theme) => theme.transitions.create(['box-shadow', 'transform']),
           '&:hover': {
-            boxShadow: 2,
+            boxShadow: 3,
+            transform: 'translateY(-4px)',
           },
         }}
       >
@@ -47,10 +50,12 @@ const MentorCardItem: FC<Props> = ({ item }) => {
           <Typography sx={{ mb: 2, color: 'text.secondary' }} variant="subtitle1">
             {item.description}
           </Typography>
-          <Box sx={{ '& img': { height: 26 } }}>
-            {/* eslint-disable-next-line */}
-            <img src={item.company?.logo} alt={item.company?.name + ' logo'} />
-          </Box>
+          {item.company?.logo && (
+            <Box sx={{ '& img': { height: 26 } }}>
+              {/* eslint-disable-next-line */}
+              <img src={item.company.logo} alt={item.company.name + ' logo'} />
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>
